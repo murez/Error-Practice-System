@@ -1,0 +1,7 @@
+TUNIC("\
+程序: eps-Qt\n\
+编译: zhiyb\n\
+测试: 707wk\n\
+日期: 24/8/2013\n\
+官网: http://gtsoft.cwsurf.de/\
+")
