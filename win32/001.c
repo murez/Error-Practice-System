@@ -8,7 +8,7 @@ int APIENTRY WinMain(HINSTANCE hInstance,
 {
 	if( checkoutdate( 2014 , 4 , 26 ) )
 	{
-		MessageBox ( NULL ,  TEXT ( "        < æœ¬è½¯ä»¶å·²è¶…å‡ºä½¿ç”¨æœŸå–½ â•®( â•¯â–½â•° )â•­ >\n< éœ€è¦æœ¬è½¯ä»¶çš„åŒå­¦è¯·å‘é€ç”µå­é‚®ä»¶è‡³ 1174843091@qq.com ç´¢å– >" ) , TEXT ( "EPS" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+		MessageBox ( NULL ,  TEXT ( "        < ±¾Èí¼þÒÑ³¬³öÊ¹ÓÃÆÚà¶ ¨r( ¨s¨Œ¨t )¨q >\n< ÐèÒª±¾Èí¼þµÄÍ¬Ñ§Çë·¢ËÍµç×ÓÓÊ¼þÖÁ 1174843091@qq.com Ë÷È¡ >" ) , TEXT ( "EPS" ) ,  MB_OK | MB_ICONINFORMATION ) ;
 		exit( 0 );
 	}
 	Findoutoption( NULL );

@@ -1,0 +1,12 @@
+<Projects version="2.0">
+	<Project active="1">001.cfp</Project>
+	<File active="1">..\main.c</File>
+	<File active="0">main.c</File>
+	<File active="0">main.h</File>
+	<File active="0">FileDlg.c</File>
+	<File active="0">FileDlg.h</File>
+	<File active="0">dialogs.dlg</File>
+	<File active="0">001.rc</File>
+	<File active="0">dialogs.h</File>
+	<File active="0">001.c</File>
+</Projects>

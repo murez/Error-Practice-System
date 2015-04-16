@@ -1,5 +1,5 @@
-// å¦‚æœè¿™æ®µä»£ç å¥½ç”¨ï¼Œé‚£å®ƒæ˜¯707wkå†™çš„ã€‚#^_^#
-//å¦‚æœä¸å¥½ç”¨ï¼Œæˆ‘ä¸çŸ¥é“æ˜¯è°å†™çš„ã€‚â•®( â•¯â–½â•° )â•­
+// Èç¹ûÕâ¶Î´úÂëºÃÓÃ£¬ÄÇËüÊÇ707wkĞ´µÄ¡£#^_^#
+//Èç¹û²»ºÃÓÃ£¬ÎÒ²»ÖªµÀÊÇË­Ğ´µÄ¡£¨r( ¨s¨Œ¨t )¨q
 #include <windows.h>
 #include <windowsx.h>
 #include <commdlg.h>
@@ -28,7 +28,7 @@ void Findoutoption(  ) ;
 void Division(  ) ;
 int checkouttext(  ) ;
 
-void Filetemp( char *files , char *filetitle )     //this is â•®( â•¯â–½â•° )â•­
+void Filetemp( char *files , char *filetitle )     //this is ¨r( ¨s¨Œ¨t )¨q
 {
     FILE *fp ;
     //char s[30000] ;
@@ -41,13 +41,13 @@ void Filetemp( char *files , char *filetitle )     //this is â•®( â•¯â–½â•° )â•­
     //	spawnlp( 0 , s , n ) ;
 }
 
-void Init( int num )                             //è®°å½•åˆå§‹åŒ–
+void Init( int num )                             //¼ÇÂ¼³õÊ¼»¯
 {
     FILE *fp ;
     int n=0 ;
     char s[30000] ;
     if( ( fp=fopen( "data\\ec.ini" , "w" ) ) == NULL )
-        MessageBox( NULL , "< init:é”™é¢˜åº“æ–‡ä»¶æœªèƒ½åˆ›å»ºæˆåŠŸ >" , "åˆå§‹åŒ–" , MB_OK ) ;
+        MessageBox( NULL , "< init:´íÌâ¿âÎÄ¼şÎ´ÄÜ´´½¨³É¹¦ >" , "³õÊ¼»¯" , MB_OK ) ;
     while( n<num )
     {
         s[n++ ] ='0' ;
@@ -57,24 +57,24 @@ void Init( int num )                             //è®°å½•åˆå§‹åŒ–
     fclose( fp ) ;
 }
 
-void Inie( int num , int sum , char c )              //å­˜å‚¨é”™é¢˜
+void Inie( int num , int sum , char c )              //´æ´¢´íÌâ
 {
     FILE *fp ;
     int n=0 ;
     char s[30000] ;
     if( ( fp=fopen( "data\\ec.ini" , "r" ) ) == NULL )
-        MessageBox( NULL , "< inie:é”™é¢˜åº“æ–‡ä»¶æœªæ‰¾åˆ° >" , "å­˜å‚¨é”™é¢˜" , MB_OK ) ;
+        MessageBox( NULL , "< inie:´íÌâ¿âÎÄ¼şÎ´ÕÒµ½ >" , "´æ´¢´íÌâ" , MB_OK ) ;
     fgets( s , 30000 , fp ) ;
     s[sum] =0 ;
     s[num - 1] =c ;
     fclose( fp ) ;
     if( ( fp=fopen( "data\\ec.ini" , "w" ) ) == NULL )
-        MessageBox( NULL , "< inie:é”™é¢˜åº“æ–‡ä»¶æœªèƒ½åˆ›å»ºæˆåŠŸ >" , "å­˜å‚¨é”™é¢˜" , MB_OK ) ;
+        MessageBox( NULL , "< inie:´íÌâ¿âÎÄ¼şÎ´ÄÜ´´½¨³É¹¦ >" , "´æ´¢´íÌâ" , MB_OK ) ;
     fprintf( fp , "%s" , s ) ;
     fclose( fp ) ;
 }
 
-int Ude(  )                                      //ç»Ÿè®¡é”™é¢˜é‡
+int Ude(  )                                      //Í³¼Æ´íÌâÁ¿
 {
     char c ;
     int n=0 ;
@@ -85,7 +85,7 @@ int Ude(  )                                      //ç»Ÿè®¡é”™é¢˜é‡
     return n ;
 }
 
-void Numtotext( char *num_char , int num_option )  //æ•°å€¼è½¬å­—ç¬¦
+void Numtotext( char *num_char , int num_option )  //ÊıÖµ×ª×Ö·û
 {
     int num_i=num_option ;
 	int num_j=0 ;
@@ -111,7 +111,7 @@ void Numtotext( char *num_char , int num_option )  //æ•°å€¼è½¬å­—ç¬¦
     *( p + num_i )='\0' ;
 }
 
-int Texttonum( char *num_char )                  //å­—ç¬¦è½¬æ•°å€¼
+int Texttonum( char *num_char )                  //×Ö·û×ªÊıÖµ
 {
     int num_i=0 ;
     while( *num_char )
@@ -122,7 +122,7 @@ int Texttonum( char *num_char )                  //å­—ç¬¦è½¬æ•°å€¼
     return num_i ;
 }
 
-int Checkleapyear( int year )                    //é«˜è€ƒå€’è®¡æ—¶4
+int Checkleapyear( int year )                    //¸ß¿¼µ¹¼ÆÊ±4
 {
     if( year % 100  ==  0 )
     {
@@ -133,7 +133,7 @@ int Checkleapyear( int year )                    //é«˜è€ƒå€’è®¡æ—¶4
     return 0 ;
 }
 
-int Dayinmonth( int month , int year )             //é«˜è€ƒå€’è®¡æ—¶3
+int Dayinmonth( int month , int year )             //¸ß¿¼µ¹¼ÆÊ±3
 {
     switch( month )
     {
@@ -162,11 +162,11 @@ int Dayinmonth( int month , int year )             //é«˜è€ƒå€’è®¡æ—¶3
     return 0 ;
 }
 
-void Date( HWND hwnd , int year , int mon , int day )  //é«˜è€ƒå€’è®¡æ—¶2
+void Date( HWND hwnd , int year , int mon , int day )  //¸ß¿¼µ¹¼ÆÊ±2
 {
     int sum=0 ;
 	int num=year ;
-    char str[1000] ="è·" ;
+    char str[1000] ="¾à" ;
 	char temp[100] ;
     if( ( mon == 6&&day>6 )||( mon>6 ) )num=year + 1 ;
     for(  ; !( year == num&&mon == 6 ) ; sum=sum + Dayinmonth( mon , year ) , mon++  )if( mon>12 )
@@ -176,14 +176,14 @@ void Date( HWND hwnd , int year , int mon , int day )  //é«˜è€ƒå€’è®¡æ—¶2
         }
     Numtotext( temp , num ) ;
     strcat( str , temp ) ;
-    strcat( str , "å¹´é«˜è€ƒè¿˜æœ‰" ) ;
+    strcat( str , "Äê¸ß¿¼»¹ÓĞ" ) ;
     Numtotext( temp , sum + 6 - day ) ;
     strcat( str , temp ) ;
-    strcat( str , "å¤©" ) ;
+    strcat( str , "Ìì" ) ;
     SetDlgItemText( hwnd , IDC_DAY , str ) ;
 }
 
-void Onlyday( HWND hwnd )                        //é«˜è€ƒå€’è®¡æ—¶1
+void Onlyday( HWND hwnd )                        //¸ß¿¼µ¹¼ÆÊ±1
 {
     time_t rawtime ;
     struct tm * timeinfo ;
@@ -192,21 +192,21 @@ void Onlyday( HWND hwnd )                        //é«˜è€ƒå€’è®¡æ—¶1
     Date( hwnd , 1900 + timeinfo->tm_year , 1 + timeinfo->tm_mon , timeinfo->tm_mday ) ;
 }
 
-void Currentsum( HWND hwnd , int num )             //æ˜¾ç¤ºæ€»é¢˜æ•° 
+void Currentsum( HWND hwnd , int num )             //ÏÔÊ¾×ÜÌâÊı 
 {
     char sum[10] ;
     Numtotext( sum , num ) ;
     SetDlgItemText( hwnd , IDC_TEXT2 , sum ) ;
 }
 
-void Currentnum( HWND hwnd , int num )             //æ˜¾ç¤ºå½“å‰é¢˜å·
+void Currentnum( HWND hwnd , int num )             //ÏÔÊ¾µ±Ç°ÌâºÅ
 {
     char sum[10] ;
     Numtotext( sum , num ) ;
     SetDlgItemText( hwnd , IDC_TEXT3 , sum ) ;
 }
 
-void Numerror( HWND hwnd )                       //æ˜¾ç¤ºé”™é¢˜æ•°
+void Numerror( HWND hwnd )                       //ÏÔÊ¾´íÌâÊı
 {
     char str[100] ;
     Numtotext( str , Ude(  ) ) ;
@@ -214,7 +214,7 @@ void Numerror( HWND hwnd )                       //æ˜¾ç¤ºé”™é¢˜æ•°
     return  ;
 }
 
-int ELFHash( char str[] )                        //å­—ç¬¦ä¸²hashè½¬æ¢ 
+int ELFHash( char str[] )                        //×Ö·û´®hash×ª»» 
 {
     int hash=0  ;
     int x=0  ;
@@ -233,12 +233,12 @@ int ELFHash( char str[] )                        //å­—ç¬¦ä¸²hashè½¬æ¢
 
 void settextsize( HWND hwnd , int sizetext )
 {
-    // è®¾ç½®å­—ä½“å‚æ•°
+    // ÉèÖÃ×ÖÌå²ÎÊı
     LOGFONT LogFont  ;
     memset( &LogFont , 0 , sizeof( LOGFONT ) ) ;
-    lstrcpy( LogFont.lfFaceName , "å®‹ä½“" ) ;//å®‹ä½“
+    lstrcpy( LogFont.lfFaceName , "ËÎÌå" ) ;//ËÎÌå
     LogFont.lfWeight=400  ;
-    LogFont.lfHeight= - sizetext  ;// å­—ä½“å¤§å°
+    LogFont.lfHeight= - sizetext  ;// ×ÖÌå´óĞ¡
     LogFont.lfCharSet=134  ;
     LogFont.lfOutPrecision=3  ;
     LogFont.lfClipPrecision=2  ;
@@ -250,7 +250,7 @@ void settextsize( HWND hwnd , int sizetext )
     SendMessage( hWndStatic , WM_SETFONT , ( WPARAM )hFont , 0 ) ;
 }
 
-int Option( char rw , int nb , int n )               //å­˜å‚¨è®¾ç½®
+int Option( char rw , int nb , int n )               //´æ´¢ÉèÖÃ
 {
     int nu[5] ;
     FILE *fp ;
@@ -289,7 +289,7 @@ int Option( char rw , int nb , int n )               //å­˜å‚¨è®¾ç½®
         if( ( fp=fopen( "data\\option.ini" , "w" ) ) == NULL )
         {
             fclose( fp ) ;
-            MessageBox( NULL , "< æ–‡ä»¶é”™è¯¯:è®¾ç½®æ–‡ä»¶æœªèƒ½åˆ›å»ºæˆåŠŸ >" , "è®¾ç½®" , MB_OK ) ;
+            MessageBox( NULL , "< ÎÄ¼ş´íÎó:ÉèÖÃÎÄ¼şÎ´ÄÜ´´½¨³É¹¦ >" , "ÉèÖÃ" , MB_OK ) ;
             exit( 0 ) ;
         }
         switch( n )
@@ -318,7 +318,7 @@ int Option( char rw , int nb , int n )               //å­˜å‚¨è®¾ç½®
     return 0 ;
 }
 
-void Division( HWND hwnd )                                //åˆå§‹åŒ–é¢˜åº“
+void Division( HWND hwnd )                                //³õÊ¼»¯Ìâ¿â
 {
     FILE *fpin ;
 	FILE *fpout ;
@@ -332,7 +332,7 @@ void Division( HWND hwnd )                                //åˆå§‹åŒ–é¢˜åº“
     if( ( fpin=fopen( "data\\select.db" , "r" ) ) == NULL )
     {
         fclose( fpin ) ;
-		MessageBox( NULL , "< FileOpenDlg:æœªé€‰æ‹©é¢˜åº“æ–‡ä»¶ >" , "åˆå§‹åŒ–é¢˜åº“" , MB_OK ) ;
+		MessageBox( NULL , "< FileOpenDlg:Î´Ñ¡ÔñÌâ¿âÎÄ¼ş >" , "³õÊ¼»¯Ìâ¿â" , MB_OK ) ;
 		exit( 0 ) ;
     }
     while( !feof( fpin ) )
@@ -378,7 +378,7 @@ void Division( HWND hwnd )                                //åˆå§‹åŒ–é¢˜åº“
     Option( 'w' , num_subject , 1 ) ;
 }
 
-int Fileslead( char *file )                     //å¯¼å…¥é¢˜åº“
+int Fileslead( char *file )                     //µ¼ÈëÌâ¿â
 {
     FILE *fpin ;
 	FILE *fpout ;
@@ -388,13 +388,13 @@ int Fileslead( char *file )                     //å¯¼å…¥é¢˜åº“
 	int num_subject=0 ;
 	if( !checkouttext( file ) ) 
 	{
-        MessageBox( NULL , "< checkouttext:éæ³•çš„é¢˜åº“æ–‡ä»¶ >" , "å¯¼å…¥é¢˜åº“" , MB_OK ) ;
+        MessageBox( NULL , "< checkouttext:·Ç·¨µÄÌâ¿âÎÄ¼ş >" , "µ¼ÈëÌâ¿â" , MB_OK ) ;
         return 1 ;
     }
     if( ( fpin=fopen( file , "r" ) ) == NULL )
     {
         fclose( fpin ) ;
-        MessageBox( NULL , "< filesopen:é¢˜åº“æ–‡ä»¶æœªæ‰¾åˆ° >" , "å¯¼å…¥é¢˜åº“" , MB_OK ) ;
+        MessageBox( NULL , "< filesopen:Ìâ¿âÎÄ¼şÎ´ÕÒµ½ >" , "µ¼ÈëÌâ¿â" , MB_OK ) ;
         exit( 0 ) ;
     }
     fpout=fopen( "data\\select.db" , "w" ) ;
@@ -449,7 +449,7 @@ int Fileslead( char *file )                     //å¯¼å…¥é¢˜åº“
     return 0 ;
 }
 
-char Displaytext( HWND hwnd , char *s , int num_option , int num_sum )    //æ˜¾ç¤ºé¢˜ç›®å†…å®¹
+char Displaytext( HWND hwnd , char *s , int num_option , int num_sum )    //ÏÔÊ¾ÌâÄ¿ÄÚÈİ
 {
     FILE *fp ;
 	FILE *fp_temp ;
@@ -473,7 +473,7 @@ char Displaytext( HWND hwnd , char *s , int num_option , int num_sum )    //æ˜¾ç
     files[11] =num_files%10 + '0' ;
     if( ( fp=fopen( files , "rb" ) ) == NULL )
     {
-    	MessageBox ( hwnd ,  TEXT( "< TEXT:æœªæ‰¾åˆ°é¢˜åº“æ–‡ä»¶ >" ) , TEXT ( "TEXT" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+    	MessageBox ( hwnd ,  TEXT( "< TEXT:Î´ÕÒµ½Ìâ¿âÎÄ¼ş >" ) , TEXT ( "TEXT" ) ,  MB_OK | MB_ICONINFORMATION ) ;
     	exit( 0 ) ;
         //Division( hwnd ) ;
         //fp=fopen( files , "rb" ) ;
@@ -504,7 +504,7 @@ char Displaytext( HWND hwnd , char *s , int num_option , int num_sum )    //æ˜¾ç
     return ques ;
 }
 
-char Displayerror( HWND hwnd , char *s , int num_option , int num_sum )    //æ˜¾ç¤ºé”™é¢˜ç›®å†…å®¹
+char Displayerror( HWND hwnd , char *s , int num_option , int num_sum )    //ÏÔÊ¾´íÌâÄ¿ÄÚÈİ
 {
     FILE *fp ;
     int num_i=0 ;
@@ -520,24 +520,24 @@ char Displayerror( HWND hwnd , char *s , int num_option , int num_sum )    //æ˜¾
 
 void Eexam( HWND hwnd )
 {
-    char s[1000] ="\t\t\t   æˆç»©\n ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  == \næ€»é¢˜é‡:" , temp[100] ;
+    char s[1000] ="\t\t\t   ³É¼¨\n ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  == \n×ÜÌâÁ¿:" , temp[100] ;
     int num_i ;
 	int num_n=0 ;
     for( num_i=0 ; num_i<num_temp ; num_i++  )
         if( num_ans[num_i] == 1 )num_n++  ;
     Numtotext( temp , num_temp ) ;
     strcat( s , temp ) ;
-    strcat( s , "\nåšå¯¹æ•°:" ) ;
+    strcat( s , "\n×ö¶ÔÊı:" ) ;
     Numtotext( temp , num_n ) ;
     strcat( s , temp ) ;
-    strcat( s , "\nåšé”™æ•°:" ) ;
+    strcat( s , "\n×ö´íÊı:" ) ;
     Numtotext( temp , num_temp - num_n ) ;
     strcat( s , temp ) ;
-    strcat( s , "\næ­£ç¡®ç‡:" ) ;
+    strcat( s , "\nÕıÈ·ÂÊ:" ) ;
     Numtotext( temp , num_n*100/num_temp ) ;
     strcat( s , temp ) ;
-    strcat( s , "ï¹ª\n\n ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  == " ) ;
-    MessageBox ( hwnd ,  s , TEXT ( "æŠ½é¢˜ç»ƒä¹ " ) ,  MB_OK | MB_ICONINFORMATION ) ;
+    strcat( s , "©‡\n\n ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  ==  == " ) ;
+    MessageBox ( hwnd ,  s , TEXT ( "³éÌâÁ·Ï°" ) ,  MB_OK | MB_ICONINFORMATION ) ;
 }
 
 void Start( HWND hwnd )
@@ -555,7 +555,7 @@ void Start( HWND hwnd )
     SetDlgItemText( hwnd , IDC_TEXT3 , char_sum ) ;
     Numtotext( char_sum , Ude(  ) ) ;
     SetDlgItemText( hwnd , IDC_TEXT4 , char_sum ) ;
-    SetDlgItemText( hwnd , IDC_MODEL , "æ­£å¸¸ç»ƒä¹ " ) ;
+    SetDlgItemText( hwnd , IDC_MODEL , "Õı³£Á·Ï°" ) ;
 }
 
 void Findoutoption( HWND hwnd )
@@ -563,7 +563,7 @@ void Findoutoption( HWND hwnd )
     //FILE *fpin ;
     if( fopen( "data\\option.ini" , "r" ) == NULL )
     {
-    	MessageBox ( hwnd ,  "< è®¾ç½®æ–‡ä»¶æœªæ‰¾åˆ° >" , TEXT ( "EPS" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+    	MessageBox ( hwnd ,  "< ÉèÖÃÎÄ¼şÎ´ÕÒµ½ >" , TEXT ( "EPS" ) ,  MB_OK | MB_ICONINFORMATION ) ;
     	exit( 0 ) ;
         //fpin=fopen( "data\\option.ini" , "w" ) ;
         //fprintf( fpin , "num = 1\nsum = 10\npassword = 6796286" ) ;
@@ -572,7 +572,7 @@ void Findoutoption( HWND hwnd )
     }
     if( fopen( "data\\select.db" , "r" ) == NULL )
     {
-    	MessageBox ( hwnd ,  "< é¢˜åº“æ–‡ä»¶æœªæ‰¾åˆ° >" , TEXT ( "EPS" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+    	MessageBox ( hwnd ,  "< Ìâ¿âÎÄ¼şÎ´ÕÒµ½ >" , TEXT ( "EPS" ) ,  MB_OK | MB_ICONINFORMATION ) ;
     	exit( 0 ) ; 
     }
 }
@@ -583,11 +583,11 @@ void Filesbak(  )
 	FILE *fpout ;
 	if( ( fpin=fopen( "data\\select.db" , "r" ) ) == NULL )
 	{
-		MessageBox( NULL , "< Filesopen:001 >" , "å¯¼å…¥é¢˜åº“" , MB_OK ) ;
+		MessageBox( NULL , "< Filesopen:001 >" , "µ¼ÈëÌâ¿â" , MB_OK ) ;
 	}
 	if( ( fpout=fopen( "data\\select.bak" , "w" ) ) == NULL )
 	{
-		MessageBox( NULL , "< Filesopen:002 >" , "å¯¼å…¥é¢˜åº“" , MB_OK ) ;
+		MessageBox( NULL , "< Filesopen:002 >" , "µ¼ÈëÌâ¿â" , MB_OK ) ;
 	}
 	while( !feof( fpin ) )
 	{
@@ -619,7 +619,7 @@ void Filesopen( HWND hwnd , char *s )
 		Displaytext( hwnd , s , 1 , Option( 'r' , 1 , 1 ) ) ;
 		Init( Option( 'r' , 1 , 1 ) ) ;
 		Numerror( hwnd ) ;
-		MessageBox( NULL , "< Filesopen:é¢˜åº“æ–‡ä»¶å·²å¯¼å…¥ >" , "å¯¼å…¥é¢˜åº“" , MB_OK ) ;
+		MessageBox( NULL , "< Filesopen:Ìâ¿âÎÄ¼şÒÑµ¼Èë >" , "µ¼ÈëÌâ¿â" , MB_OK ) ;
 	}
 }
 
@@ -649,7 +649,7 @@ void Landingtime( int num_flag )
     fclose( fpout ) ;
 }
 
-LRESULT CALLBACK Password( HWND hDlg ,  UINT message ,  WPARAM wParam ,  LPARAM lParam )        //2014/2/10 å¢åŠ ä¸´æ—¶çš„è·Ÿè¸ªç™»å½•ç•Œé¢
+LRESULT CALLBACK Password( HWND hDlg ,  UINT message ,  WPARAM wParam ,  LPARAM lParam )        //2014/2/10 Ôö¼ÓÁÙÊ±µÄ¸ú×ÙµÇÂ¼½çÃæ
 {
     char passwords[1000] ="" ;
     switch ( message )
@@ -669,7 +669,7 @@ LRESULT CALLBACK Password( HWND hDlg ,  UINT message ,  WPARAM wParam ,  LPARAM 
             {
                 SetDlgItemText( hDlg , IDC_EDT2 , "" ) ;
                 Landingtime( 0 ) ;
-                MessageBox ( hDlg ,  TEXT ( "< å¯†ç é”™è¯¯! >" ) , TEXT ( "ç™»é™†" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+                MessageBox ( hDlg ,  TEXT ( "< ÃÜÂë´íÎó! >" ) , TEXT ( "µÇÂ½" ) ,  MB_OK | MB_ICONINFORMATION ) ;
             }
             break ;
         case IDC_BTN2:
@@ -692,10 +692,10 @@ LRESULT CALLBACK Setpassword( HWND hDlg ,  UINT message ,  WPARAM wParam ,  LPAR
         {
         case IDC_BTN3:
             GetDlgItemText( hDlg , IDC_EDT4 , passwords , sizeof( passwords ) ) ;
-            if( strcmp( passwords , "" ) == 0 )MessageBox ( hDlg ,  TEXT ( "< è¯·è¾“å…¥æ–°å¯†ç  >" ) , TEXT ( "æ›´æ”¹å¯†ç " ) ,  MB_OK | MB_ICONINFORMATION ) ;
+            if( strcmp( passwords , "" ) == 0 )MessageBox ( hDlg ,  TEXT ( "< ÇëÊäÈëĞÂÃÜÂë >" ) , TEXT ( "¸ü¸ÄÃÜÂë" ) ,  MB_OK | MB_ICONINFORMATION ) ;
             else
             {
-                if( !Option( 'w' , ELFHash( passwords ) , 2 ) )MessageBox ( hDlg ,  TEXT ( "< å¯†ç è®¾ç½®å‡ºé”™ï¼Œè¯·é‡æ–°è¾“å…¥ >" ) , TEXT ( "æ›´æ”¹å¯†ç " ) ,  MB_OK | MB_ICONINFORMATION ) ;
+                if( !Option( 'w' , ELFHash( passwords ) , 2 ) )MessageBox ( hDlg ,  TEXT ( "< ÃÜÂëÉèÖÃ³ö´í£¬ÇëÖØĞÂÊäÈë >" ) , TEXT ( "¸ü¸ÄÃÜÂë" ) ,  MB_OK | MB_ICONINFORMATION ) ;
                 else EndDialog( hDlg ,  LOWORD( wParam ) ) ;
             }
             break ;
@@ -709,7 +709,7 @@ LRESULT CALLBACK Setpassword( HWND hDlg ,  UINT message ,  WPARAM wParam ,  LPAR
     return FALSE ;
 }
 
-void Showet(  )                                  //å¯¼å‡ºé”™é¢˜ 
+void Showet(  )                                  //µ¼³ö´íÌâ 
 {
 	FILE *fp_in_ec ;
 	FILE *fp_in_e ;
@@ -744,7 +744,7 @@ void Showet(  )                                  //å¯¼å‡ºé”™é¢˜
 	fclose( fp_out ) ;
 }
 
-void copyec( char *files , char *filetitle )       //å¯¼å‡ºé”™é¢˜åˆ°æ–‡ä»¶ 
+void copyec( char *files , char *filetitle )       //µ¼³ö´íÌâµ½ÎÄ¼ş 
 {
 	FILE *fp_in ;
 	FILE *fp_out ;
@@ -861,7 +861,7 @@ int checkouttext( char *files )
 	return 1 ;
 }
 
-int checkoutdate(int date_year , int date_mon , int date_day ) //è¶…å‡ºæ—¶é—´è¿”å›1ï¼Œå¦åˆ™è¿”å›0 
+int checkoutdate(int date_year , int date_mon , int date_day ) //³¬³öÊ±¼ä·µ»Ø1£¬·ñÔò·µ»Ø0 
 {
 	int flag;
 	time_t rawtime;
@@ -899,7 +899,7 @@ LRESULT CALLBACK Settext( HWND hDlg ,  UINT message ,  WPARAM wParam ,  LPARAM l
     switch ( message )
     {
     case WM_INITDIALOG:
-    	//è®¾ç½®çª—å£çš„å›¾æ ‡
+    	//ÉèÖÃ´°¿ÚµÄÍ¼±ê
 		hInstance = GetModuleHandle( NULL ) ;
 		hIcon = LoadIcon( hInstance , MAKEINTRESOURCE( IDI_ICONAPP ) ) ;
 		SendMessage( hDlg , WM_SETICON , ICON_BIG , ( long )hIcon ) ;
@@ -948,16 +948,16 @@ LRESULT CALLBACK ProcLink( HWND hWnd , UINT Msg , WPARAM wParam , LPARAM lParam 
     switch( Msg )
     {
         case WM_SETCURSOR :
-        //è®¾ç½®é¼ æ ‡åœ¨ä¸Šé¢æ—¶å€™å½¢çŠ¶ï¼ˆæ‰‹å‹ï¼‰
+        //ÉèÖÃÊó±êÔÚÉÏÃæÊ±ºòĞÎ×´£¨ÊÖĞÍ£©
         SetCursor( LoadCursor( NULL , IDC_HAND ) ) ;
         break  ;
         case WM_LBUTTONDOWN :
-        //å®ç°è¶…çº§é“¾æ¥
+        //ÊµÏÖ³¬¼¶Á´½Ó
         ShellExecute( NULL , "open" , "http://www.baidu.com" , NULL , NULL , SW_SHOWNORMAL ) ;
         break  ;
         default :
         return CallWindowProc( NULL , hWnd , Msg , wParam , lParam ) ;
-        //æ¶ˆæ¯å›è°ƒ
+        //ÏûÏ¢»Øµ÷
     }
     return 0  ;
 }
@@ -973,16 +973,16 @@ LRESULT CALLBACK About( HWND hDlg ,  UINT message ,  WPARAM wParam ,  LPARAM lPa
 	RECT   rc ;
 	//extern  StaticProc ;
 	/*
-	æˆ‘è‰¹ï¼Œç»ˆäºæ˜¾ç¤ºå›¾ç‰‡äº† ( â”¬ï¼¿â”¬ )
+	ÎÒÜ³£¬ÖÕÓÚÏÔÊ¾Í¼Æ¬ÁË ( ©Ğ£ß©Ğ )
 	*/
     switch ( message )
     {
     case WM_INITDIALOG:
-    	//è®¾ç½®çª—å£çš„å›¾æ ‡
+    	//ÉèÖÃ´°¿ÚµÄÍ¼±ê
 		hInstance = GetModuleHandle( NULL ) ;
 		//hIcon = LoadIcon( hInstance , MAKEINTRESOURCE( IDI_ICONAPP ) ) ;
 		//SendMessage( hDlg , WM_SETICON , ICON_BIG , ( long )hIcon ) ;
-		//åŠ è½½é‚£ä¸ªå›¾ç‰‡
+		//¼ÓÔØÄÇ¸öÍ¼Æ¬
 		hBitmap = LoadBitmap( hInstance , MAKEINTRESOURCE( IDB_ABOUT ) ) ;
 		hImage = GetDlgItem( hDlg , IDC_IMG1 ) ;
 		SendMessage( hImage , STM_SETIMAGE , IMAGE_BITMAP , ( long )hBitmap ) ;
@@ -992,7 +992,7 @@ LRESULT CALLBACK About( HWND hDlg ,  UINT message ,  WPARAM wParam ,  LPARAM lPa
 		//StaticProc=( WNDPROC )SetWindowLong( GetDlgItem( hDlg , IDC_STC8 ) , GWL_WNDPROC , ( LONG )ProcLink ) ;
         return TRUE ;
 	case WM_PAINT:   
-		//ä¸‹é¢æ˜¯ç»™çª—å£å¡«å……èƒŒæ™¯
+		//ÏÂÃæÊÇ¸ø´°¿ÚÌî³ä±³¾°
 		//GetClientRect( hDlg , &rc ) ;   
 		//hDC   =   BeginPaint( hDlg , &ps ) ;   
 		//FillRect( hDC , &rc , ( HBRUSH )CreateSolidBrush( RGB( 200 ,  227 ,  255 ) ) ) ;
@@ -1101,7 +1101,7 @@ void Main_OnCommand( HWND hwnd ,  int id ,  HWND hwndCtl ,  UINT codeNotify )
 {
     FILE *fp ;
     char s[30000] ="" ;
-	char ques[] ="\næ­£ç¡®ç­”æ¡ˆæ˜¯A" ;
+	char ques[] ="\nÕıÈ·´ğ°¸ÊÇA" ;
 	char ans_c='A' ;
     char str[100] ="" ;
     char files[30000] ="" ;
@@ -1131,7 +1131,7 @@ void Main_OnCommand( HWND hwnd ,  int id ,  HWND hwndCtl ,  UINT codeNotify )
         {
         case 1:
             if( num_option>1 )-- num_option ;
-            else MessageBox ( hwnd ,  TEXT ( "< ç¬¬ä¸€é¢˜å–½ â•®( â•¯â–½â•° )â•­ >" ) , TEXT ( "ä¸Šä¸€é¢˜" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+            else MessageBox ( hwnd ,  TEXT ( "< µÚÒ»Ìâà¶ ¨r( ¨s¨Œ¨t )¨q >" ) , TEXT ( "ÉÏÒ»Ìâ" ) ,  MB_OK | MB_ICONINFORMATION ) ;
             Option( 'w' , num_option , 0 ) ;
             Currentnum( hwnd , num_option ) ;
             break ;
@@ -1156,7 +1156,7 @@ void Main_OnCommand( HWND hwnd ,  int id ,  HWND hwndCtl ,  UINT codeNotify )
         {
         case 1:
             if( num_option<num_sum )++ num_option ;
-            else MessageBox ( hwnd ,  TEXT ( "< æœ€åä¸€é¢˜å–½ â•®( â•¯â–½â•° )â•­ >" ) , TEXT ( "ä¸‹ä¸€é¢˜" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+            else MessageBox ( hwnd ,  TEXT ( "< ×îºóÒ»Ìâà¶ ¨r( ¨s¨Œ¨t )¨q >" ) , TEXT ( "ÏÂÒ»Ìâ" ) ,  MB_OK | MB_ICONINFORMATION ) ;
             Option( 'w' , num_option , 0 ) ;
             Currentnum( hwnd , num_option ) ;
             flag_ans=1 ;
@@ -1238,7 +1238,7 @@ void Main_OnCommand( HWND hwnd ,  int id ,  HWND hwndCtl ,  UINT codeNotify )
             }
             else
             {
-                MessageBox ( hwnd ,  TEXT ( "< æ•°å€¼é”™è¯¯:éæ³•æ•°å€¼ ï¿£ã¸ï¿£ >" ) , TEXT ( "è·³é¢˜" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+                MessageBox ( hwnd ,  TEXT ( "< ÊıÖµ´íÎó:·Ç·¨ÊıÖµ £ş¤Ø£ş >" ) , TEXT ( "ÌøÌâ" ) ,  MB_OK | MB_ICONINFORMATION ) ;
                 num_i=num_option ;
             }
             break ;
@@ -1249,7 +1249,7 @@ void Main_OnCommand( HWND hwnd ,  int id ,  HWND hwndCtl ,  UINT codeNotify )
             }
             else
             {
-                MessageBox ( hwnd ,  TEXT ( "< æ•°å€¼é”™è¯¯:éæ³•æ•°å€¼ ï¿£ã¸ï¿£ >" ) , TEXT ( "è·³é¢˜" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+                MessageBox ( hwnd ,  TEXT ( "< ÊıÖµ´íÎó:·Ç·¨ÊıÖµ £ş¤Ø£ş >" ) , TEXT ( "ÌøÌâ" ) ,  MB_OK | MB_ICONINFORMATION ) ;
             }
             break ;
         case 3:
@@ -1260,7 +1260,7 @@ void Main_OnCommand( HWND hwnd ,  int id ,  HWND hwndCtl ,  UINT codeNotify )
             }
             else
             {
-                MessageBox ( hwnd ,  TEXT ( "< æ•°å€¼é”™è¯¯:éæ³•æ•°å€¼ ï¿£ã¸ï¿£ >" ) , TEXT ( "eps" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+                MessageBox ( hwnd ,  TEXT ( "< ÊıÖµ´íÎó:·Ç·¨ÊıÖµ £ş¤Ø£ş >" ) , TEXT ( "eps" ) ,  MB_OK | MB_ICONINFORMATION ) ;
             }
             break ;
         }
@@ -1268,7 +1268,7 @@ void Main_OnCommand( HWND hwnd ,  int id ,  HWND hwndCtl ,  UINT codeNotify )
     case IDC_NORMAL:
         if( model != 1 )
         {
-            SetDlgItemText( hwnd , IDC_MODEL , "æ­£å¸¸ç»ƒä¹ " ) ;
+            SetDlgItemText( hwnd , IDC_MODEL , "Õı³£Á·Ï°" ) ;
             Currentnum( hwnd , Option( 'r' , 1 , 0 ) ) ;
             Displaytext( hwnd , s , Option( 'r' , 1 , 0 ) , Option( 'r' , 1 , 1 ) ) ;
             model=1 ;
@@ -1277,12 +1277,12 @@ void Main_OnCommand( HWND hwnd ,  int id ,  HWND hwndCtl ,  UINT codeNotify )
     case IDC_ERROR:
         if( model != 2 )
         {
-            if( !Ude(  ) )MessageBox ( hwnd ,  TEXT ( "< ç›®å‰æ²¡æœ‰é”™é¢˜  - _ - ||| >" ) , TEXT ( "é”™é¢˜ç»ƒä¹ " ) ,  MB_OK | MB_ICONINFORMATION ) ;
+            if( !Ude(  ) )MessageBox ( hwnd ,  TEXT ( "< Ä¿Ç°Ã»ÓĞ´íÌâ  - _ - ||| >" ) , TEXT ( "´íÌâÁ·Ï°" ) ,  MB_OK | MB_ICONINFORMATION ) ;
             else
             {
                 num_ec=1 ;
                 Currentnum( hwnd , num_ec ) ;
-                SetDlgItemText( hwnd , IDC_MODEL , "é”™é¢˜ç»ƒä¹ " ) ;
+                SetDlgItemText( hwnd , IDC_MODEL , "´íÌâÁ·Ï°" ) ;
                 Displayerror( hwnd , s , num_ec , Ude(  ) ) ;
                 model=2 ;
             }
@@ -1295,7 +1295,7 @@ void Main_OnCommand( HWND hwnd ,  int id ,  HWND hwndCtl ,  UINT codeNotify )
             num_temp=Texttonum( str ) ;
             if( num_temp>=Option( 'r' , 1 , 1 )||num_temp<1 )
             {
-                MessageBox ( hwnd ,  TEXT ( "< æ•°å€¼é”™è¯¯:éæ³•æ•°å€¼ ( â”¬ï¼¿â”¬ ) >" ) , TEXT ( "æŠ½é¢˜ç»ƒä¹ " ) ,  MB_OK | MB_ICONINFORMATION ) ;
+                MessageBox ( hwnd ,  TEXT ( "< ÊıÖµ´íÎó:·Ç·¨ÊıÖµ ( ©Ğ£ß©Ğ ) >" ) , TEXT ( "³éÌâÁ·Ï°" ) ,  MB_OK | MB_ICONINFORMATION ) ;
                 break ;
             }
             srand( time( NULL ) ) ;
@@ -1312,7 +1312,7 @@ void Main_OnCommand( HWND hwnd ,  int id ,  HWND hwndCtl ,  UINT codeNotify )
                         break ;
                     }
             }
-            SetDlgItemText( hwnd , IDC_MODEL , "æŠ½é¢˜ç»ƒä¹ " ) ;
+            SetDlgItemText( hwnd , IDC_MODEL , "³éÌâÁ·Ï°" ) ;
             Currentnum( hwnd , num_eec + 1 ) ;
             model=3 ;
             Displaytext( hwnd , s , num_extract[num_eec] , Option( 'r' , 1 , 1 ) ) ;
@@ -1323,7 +1323,7 @@ void Main_OnCommand( HWND hwnd ,  int id ,  HWND hwndCtl ,  UINT codeNotify )
         {
             Eexam( hwnd ) ;
             model=1 ;
-            SetDlgItemText( hwnd , IDC_MODEL , "æ­£å¸¸ç»ƒä¹ " ) ;
+            SetDlgItemText( hwnd , IDC_MODEL , "Õı³£Á·Ï°" ) ;
             Currentnum( hwnd , Option( 'r' , 1 , 0 ) ) ;
             SetDlgItemText( hwnd , IDC_TEXT6 , "0" ) ;
             Displaytext( hwnd , s , Option( 'r' , 1 , 0 ) , Option( 'r' , 1 , 1 ) ) ;
@@ -1336,16 +1336,16 @@ void Main_OnCommand( HWND hwnd ,  int id ,  HWND hwndCtl ,  UINT codeNotify )
  		}
  		else
  		{
- 			MessageBox ( hwnd ,  TEXT ( "< åªæœ‰åœ¨æ­£å¸¸æ¨¡å¼ä¸‹æ‰èƒ½å¯¼å…¥é¢˜åº“æ–‡ä»¶ â•®( â•¯_â•° )â•­ >" ) , TEXT ( "å¯¼å…¥é¢˜åº“" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+ 			MessageBox ( hwnd ,  TEXT ( "< Ö»ÓĞÔÚÕı³£Ä£Ê½ÏÂ²ÅÄÜµ¼ÈëÌâ¿âÎÄ¼ş ¨r( ¨s_¨t )¨q >" ) , TEXT ( "µ¼ÈëÌâ¿â" ) ,  MB_OK | MB_ICONINFORMATION ) ;
  		}
         break ;
     case IDM_RESET:
     	if( model == 1 )
     	{ 
-    	if( MessageBox( hwnd , TEXT( "ç¡®å®šæ’¤é”€å·²å¯¼å…¥çš„é¢˜åº“?( æœ¬æ“ä½œä¸å¯é€† ) ( O_O )ï¼Ÿ" ) , TEXT( "æ’¤é”€å¯¼å…¥" ) , MB_YESNO ) == 6 )
+    	if( MessageBox( hwnd , TEXT( "È·¶¨³·ÏúÒÑµ¼ÈëµÄÌâ¿â?( ±¾²Ù×÷²»¿ÉÄæ ) ( O_O )£¿" ) , TEXT( "³·Ïúµ¼Èë" ) , MB_YESNO ) == 6 )
     	{
     		Fileslead( "data\\select.bak" ) ;
-    		SetDlgItemText( hwnd , IDC_MODEL , "æ­£å¸¸ç»ƒä¹ " ) ;
+    		SetDlgItemText( hwnd , IDC_MODEL , "Õı³£Á·Ï°" ) ;
     		Option( 'w' , 1 , 0 ) ;
             Currentnum( hwnd , 1 ) ;
             SetDlgItemText( hwnd , IDC_TEXT4 , "0" ) ;
@@ -1358,7 +1358,7 @@ void Main_OnCommand( HWND hwnd ,  int id ,  HWND hwndCtl ,  UINT codeNotify )
     	}
 		else
 		{
-			MessageBox ( hwnd ,  TEXT ( "< åªæœ‰åœ¨æ­£å¸¸æ¨¡å¼ä¸‹æ‰èƒ½æ’¤é”€å¯¼å…¥ â•®( â•¯_â•° )â•­ >" ) , TEXT ( "æ’¤é”€å¯¼å…¥" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+			MessageBox ( hwnd ,  TEXT ( "< Ö»ÓĞÔÚÕı³£Ä£Ê½ÏÂ²ÅÄÜ³·Ïúµ¼Èë ¨r( ¨s_¨t )¨q >" ) , TEXT ( "³·Ïúµ¼Èë" ) ,  MB_OK | MB_ICONINFORMATION ) ;
 		}
     	break ;
     case IDM_EXAMPLE:
@@ -1367,36 +1367,36 @@ example:\n\n\
 1.Do you think there is any room for us ________ ?\n\
 A.two	B.the two		C.second		D.the second\n\
 ^A\n\
-2.The Peopleâ€™s Liberation Army was founded _____ .\n\
+2.The People¡¯s Liberation Army was founded _____ .\n\
 A.on August 1 , 1927	B.in 1927 , 1 August		\n\
 C.on Aaugust 1st , 1927	D.in August 1 , 1927\n\
 ^C\n\
-3.â€What year is it ?â€ â€œIt is ______ .â€\n\
+3.¡±What year is it ?¡± ¡°It is ______ .¡±\n\
 A.nineteen hundred and ninety - seven	B.nineteen and ninety - seven\n\
 C.nineteen ninety and seven			D.nineteen ninety - seven\n\
-^D" ) , TEXT ( "é¢˜åº“æ¨¡æ¿" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+^D" ) , TEXT ( "Ìâ¿âÄ£°å" ) ,  MB_OK | MB_ICONINFORMATION ) ;
     break ;
     case IDM_HELP:
         MessageBox ( hwnd ,  "\
-ã€å¯¼å…¥é¢˜åº“ã€‘\n\
-	é¢˜åº“æ–‡ä»¶å¿…é¡»ä¸ºæ–‡æœ¬æ–‡ä»¶ï¼Œé¢˜ç›®æ ¼å¼è¯·å‚è€ƒã€é¢˜åº“æ¨¡æ¿ã€‘\n\
-	é€‰å®šé¢˜åº“æ–‡ä»¶ï¼Œå•å‡»ã€æ‰“å¼€ã€‘æŒ‰é’®å³å¯å¯¼å…¥é¢˜åº“ã€‚å¯¼å…¥é¢˜åº“åç¨‹åºä¼šè‡ªåŠ¨åˆ·æ–°é¢˜åº“æ–‡ä»¶å¹¶æ¸…ç©ºé”™é¢˜è®°å½•ï¼Œä½†ä¸ä¼šæ¸…ç©ºæ—¥å¿—\n\
-ã€åˆ·æ–°é¢˜åº“ã€‘\n\
-	å¦‚æœé¢˜ç›®å‡ºç°ä¹±ç ï¼Œè¯·åˆ·æ–°é¢˜åº“ï¼Œå°†é‡æ–°åŠ è½½é¢˜åº“æ–‡ä»¶\n\
-ã€æ­£å¸¸ç»ƒä¹ ã€‘\n\
-	æœ¬æ¨¡å—æŒ‰ç…§æ­£å¸¸é¡ºåºç»ƒä¹ é¢˜ç›®ï¼Œåšé”™çš„é¢˜ç›®ä¼šè‡ªåŠ¨è®°å½•åœ¨é”™é¢˜åº“æ–‡ä»¶é‡Œ , åšå¯¹çš„é¢˜ç›®ä¸ä¼šè®°å½•ã€‚ä½ å¯ä»¥åœ¨ã€å½“å‰é¢˜å·ã€‘è¾“å…¥æ¡†è¾“å…¥ä½ æƒ³è¦è·³è‡³çš„é¢˜å·ï¼Œç„¶åæŒ‰ã€è·³è‡³ã€‘æŒ‰é’®å°±èƒ½åˆ°è¾¾æŒ‡å®šé¢˜ç›®\n\
-ã€é”™é¢˜ç»ƒä¹ ã€‘\n\
-	åšé”™çš„é¢˜ç›®å¯ä»¥åœ¨æœ¬æ¨¡å—é‡æ–°ç»ƒä¹ ï¼Œä½†åšå¯¹åä¸ä¼šåˆ é™¤\n\
-ã€æŠ½é¢˜ç»ƒä¹ ã€‘\n\
-	æœ¬æ¨¡å—å°†åœ¨é¢˜åº“ä¸­éšæœºæŠ½å–è¾“å…¥çš„é¢˜é‡ï¼Œåšå®Œè¯·æŒ‰ã€äº¤å·ã€‘æŒ‰é’®\n\
-ã€æ¸…ç©ºæ—¥å¿—ã€‘\n\
-	æœ¬æ¨¡å—ä¼šå°†ä½ æ¯æ¬¡ç™»é™†çš„æ—¶é—´ä¿å­˜åœ¨dataæ–‡ä»¶å¤¹log.iniæ–‡ä»¶\n" , TEXT ( "EPSå¸®åŠ©" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+¡¾µ¼ÈëÌâ¿â¡¿\n\
+	Ìâ¿âÎÄ¼ş±ØĞëÎªÎÄ±¾ÎÄ¼ş£¬ÌâÄ¿¸ñÊ½Çë²Î¿¼¡¾Ìâ¿âÄ£°å¡¿\n\
+	Ñ¡¶¨Ìâ¿âÎÄ¼ş£¬µ¥»÷¡¾´ò¿ª¡¿°´Å¥¼´¿Éµ¼ÈëÌâ¿â¡£µ¼ÈëÌâ¿âºó³ÌĞò»á×Ô¶¯Ë¢ĞÂÌâ¿âÎÄ¼ş²¢Çå¿Õ´íÌâ¼ÇÂ¼£¬µ«²»»áÇå¿ÕÈÕÖ¾\n\
+¡¾Ë¢ĞÂÌâ¿â¡¿\n\
+	Èç¹ûÌâÄ¿³öÏÖÂÒÂë£¬ÇëË¢ĞÂÌâ¿â£¬½«ÖØĞÂ¼ÓÔØÌâ¿âÎÄ¼ş\n\
+¡¾Õı³£Á·Ï°¡¿\n\
+	±¾Ä£¿é°´ÕÕÕı³£Ë³ĞòÁ·Ï°ÌâÄ¿£¬×ö´íµÄÌâÄ¿»á×Ô¶¯¼ÇÂ¼ÔÚ´íÌâ¿âÎÄ¼şÀï , ×ö¶ÔµÄÌâÄ¿²»»á¼ÇÂ¼¡£Äã¿ÉÒÔÔÚ¡¾µ±Ç°ÌâºÅ¡¿ÊäÈë¿òÊäÈëÄãÏëÒªÌøÖÁµÄÌâºÅ£¬È»ºó°´¡¾ÌøÖÁ¡¿°´Å¥¾ÍÄÜµ½´ïÖ¸¶¨ÌâÄ¿\n\
+¡¾´íÌâÁ·Ï°¡¿\n\
+	×ö´íµÄÌâÄ¿¿ÉÒÔÔÚ±¾Ä£¿éÖØĞÂÁ·Ï°£¬µ«×ö¶Ôºó²»»áÉ¾³ı\n\
+¡¾³éÌâÁ·Ï°¡¿\n\
+	±¾Ä£¿é½«ÔÚÌâ¿âÖĞËæ»ú³éÈ¡ÊäÈëµÄÌâÁ¿£¬×öÍêÇë°´¡¾½»¾í¡¿°´Å¥\n\
+¡¾Çå¿ÕÈÕÖ¾¡¿\n\
+	±¾Ä£¿é»á½«ÄãÃ¿´ÎµÇÂ½µÄÊ±¼ä±£´æÔÚdataÎÄ¼ş¼Ğlog.iniÎÄ¼ş\n" , TEXT ( "EPS°ïÖú" ) ,  MB_OK | MB_ICONINFORMATION ) ;
         break ;
     case IDM_ABOUT:
         DialogBox( NULL ,  ( LPCTSTR )IDD_ABOUT ,  hwnd ,  ( DLGPROC )About ) ;
         break ;
     case IDM_SHOWERROR:
-    	if( !Ude(  ) )MessageBox ( hwnd ,  TEXT ( "< ç›®å‰æ²¡æœ‰é”™é¢˜ â•®( â•¯_â•° )â•­ >" ) , TEXT ( "æŸ¥çœ‹é”™é¢˜" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+    	if( !Ude(  ) )MessageBox ( hwnd ,  TEXT ( "< Ä¿Ç°Ã»ÓĞ´íÌâ ¨r( ¨s_¨t )¨q >" ) , TEXT ( "²é¿´´íÌâ" ) ,  MB_OK | MB_ICONINFORMATION ) ;
     	else
     	{
 	    	Showet(  ) ;
@@ -1412,7 +1412,7 @@ C.nineteen ninety and seven			D.nineteen ninety - seven\n\
     case IDM_CLEAR:
         if( Ude(  ) != 0 )
         {
-            if( MessageBox( hwnd , TEXT( "ç¡®å®šæ¸…ç©ºé”™é¢˜? ( O_O )ï¼Ÿ" ) , TEXT( "æ¸…ç©ºé”™é¢˜" ) , MB_YESNO ) == 6 )
+            if( MessageBox( hwnd , TEXT( "È·¶¨Çå¿Õ´íÌâ? ( O_O )£¿" ) , TEXT( "Çå¿Õ´íÌâ" ) , MB_YESNO ) == 6 )
             {
                 Init( Option( 'r' , 1 , 1 ) ) ;
                 Numerror( hwnd ) ;
@@ -1420,13 +1420,13 @@ C.nineteen ninety and seven			D.nineteen ninety - seven\n\
                 num_flag=1 ;
             }
         }
-        else MessageBox ( hwnd ,  TEXT ( "< ç›®å‰æ²¡æœ‰é”™é¢˜ â•®( â•¯_â•° )â•­ >" ) , TEXT ( "æ¸…ç©ºé”™é¢˜" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+        else MessageBox ( hwnd ,  TEXT ( "< Ä¿Ç°Ã»ÓĞ´íÌâ ¨r( ¨s_¨t )¨q >" ) , TEXT ( "Çå¿Õ´íÌâ" ) ,  MB_OK | MB_ICONINFORMATION ) ;
         break ;
     case IDM_CLOG:
-        if( MessageBox( hwnd , TEXT( "ç¡®å®šæ¸…ç©ºæ—¥å¿—? â•®( â•¯_â•° )â•­ " ) , TEXT( "æ¸…ç©ºæ—¥å¿—" ) , MB_YESNO ) == 6 )
+        if( MessageBox( hwnd , TEXT( "È·¶¨Çå¿ÕÈÕÖ¾? ¨r( ¨s_¨t )¨q " ) , TEXT( "Çå¿ÕÈÕÖ¾" ) , MB_YESNO ) == 6 )
         {
-            if( fopen( "data\\log.ini" , "w" ) != NULL )MessageBox ( hwnd ,  TEXT ( "< æ—¥å¿—å·²æ¸…ç©º >" ) , TEXT ( "æ¸…ç©ºæ—¥å¿—" ) ,  MB_OK | MB_ICONINFORMATION ) ;
-            else MessageBox ( hwnd ,  TEXT ( "< æ—¥å¿—æ¸…ç©ºå¤±è´¥ o( ï¸¶ï¸¿ï¸¶ )o >" ) , TEXT ( "æ¸…ç©ºæ—¥å¿—" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+            if( fopen( "data\\log.ini" , "w" ) != NULL )MessageBox ( hwnd ,  TEXT ( "< ÈÕÖ¾ÒÑÇå¿Õ >" ) , TEXT ( "Çå¿ÕÈÕÖ¾" ) ,  MB_OK | MB_ICONINFORMATION ) ;
+            else MessageBox ( hwnd ,  TEXT ( "< ÈÕÖ¾Çå¿ÕÊ§°Ü o( ¦á¦ä¦á )o >" ) , TEXT ( "Çå¿ÕÈÕÖ¾" ) ,  MB_OK | MB_ICONINFORMATION ) ;
         }
         break ;
     case IDM_REFRESH:
